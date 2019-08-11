@@ -3,9 +3,7 @@ class Song < ActiveRecord::Base
   belongs_to :genre
 
   def get_genre_name
-    self.genres.collect do |t|
-      t.name
-    end
+    self.genres.name
   end
 
   def drake_made_this
